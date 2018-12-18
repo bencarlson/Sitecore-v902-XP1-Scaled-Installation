@@ -38,7 +38,7 @@ Depending on the role or instance, each has it's own respective prerequisites, b
 * IIS 10 for Web server
 * .NET Framework 4.6.2 or later
 * PowerShell 5.1 or later
-* Sitecore Installation Framework (SIF) PowerShell module
+* Sitecore Installation Framework (SIF) PowerShell module - installation step listed below (InstallSitecoreFundamentalsAndInstallFramework.ps1)
 * Any Web Browsers in this list: Microsoft Internet Explorer 11, Mozilla Firefox, Google Chrome or Microsoft Edge
 * Domain names for each roles i.e. search.mysite.com, searchcollection.mysite.com, reporting.mysite.com, processing.mysite.com
 
