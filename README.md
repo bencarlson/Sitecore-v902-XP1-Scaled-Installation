@@ -18,7 +18,7 @@ We will be referencing *the diagram* below in our instructions to come.
 
 The general approach is to start with setting up *Solr* and a *Sql* instance then followed by *XConnect (i.e. Collection, CollectionSearch roles)*, *xDB Services (i.e. ReferenceData, MarketingAutomationReporting, MarketingAutomation roles)*, *Reporting*, *Processing*, *Content Management*, and *Content Delivery* instances.
 
-Install and Configure SOLR:
+**Install and Configure SOLR:**
 DeploySolr\01 Deploy_SOLR.md
 
 Install and Configure SQL:
@@ -199,7 +199,7 @@ Go into File Explorer/Network and ensure that file sharing is turned off and it 
 Open PS in admin in the c:\deploy_xp1_scaled directory
 
 Since this is the first Sitecore specific VM, you need to create or acquire the cert for xconnect_client.
-For dev and eval purposes, a self-signed cert can be created:
+For dev and eval purposes, a self-signed cert can be created - BE SURE TO UPDATE PARAMS BEFORE RUNNING (i.e. prefix):
 
 ```powershell
 .\xconnect-CreateCert.ps1
