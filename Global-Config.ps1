@@ -13,6 +13,8 @@ $global:SqlAdminUser = "sa"
 $global:SqlAdminPassword="Test12345" 
 $global:SqlServer = "XC-XP1-SQL"
 
+$global:SitecoreAdminPassword = "b"
+
 #XConnect Settings
 $global:XConnectEnvironment ="Development" #For production environment use Production
 $global:XConnectLogLevel = "Information" #Can be Debug
