@@ -199,7 +199,7 @@ Go into File Explorer/Network and ensure that file sharing is turned off and it 
 Open PS in admin in the c:\deploy_xp1_scaled directory
 
 Since this is the first Sitecore specific VM, you need to create or acquire the cert for xconnect_client.
-For dev and eval purposes, a self-signed cert can be created - BE SURE TO UPDATE PARAMS BEFORE RUNNING (i.e. prefix):
+For dev and eval purposes, a self-signed cert can be created - **BE SURE TO UPDATE PARAMS BEFORE RUNNING (i.e. prefix)** - also be sure the root cert can be exported (private key) or you'll have conflicts on other servers:
 
 ```powershell
 .\xconnect-CreateCert.ps1
