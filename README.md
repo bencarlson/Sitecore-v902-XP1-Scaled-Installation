@@ -65,7 +65,7 @@ Select to use Visual Studio Code as default editor
 Web Platform Installer (WPI) 5.0
 https://www.microsoft.com/web/downloads/platform.aspx
 
-Run Web Platform Installer:
+Run Web Platform Installer: C:\Program Files\Microsoft\Web Platform Installer\WebPlatformInstaller.exe
 Install following features using WPI 5.0:
 
 * Web Deploy 3.6 for Hosting Servers
