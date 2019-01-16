@@ -111,7 +111,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=53587
 (may require restart)
 
 Microsoft SQL Server Data-Tier Application Framework (DAC Fx) version 17.1 – Install both x64 and x86 version
-https://www.microsoft.com/en-us/download/confirmation.aspx?id=55255
+https://www.microsoft.com/en-us/download/details.aspx?id=55255
 Note that both x86 and x64 have the same file name so download and install each one separately
 
 SQLSysCLRTypes
