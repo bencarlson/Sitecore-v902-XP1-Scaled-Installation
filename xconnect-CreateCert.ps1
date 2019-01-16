@@ -1,7 +1,10 @@
+
 #define parameters 
-$Prefix = "xp902" 
 $PSScriptRoot = "c:\deploy_xp1_scaled"
 $Config = "$PSScriptRoot\config"
+
+#Initializes Global Parameters
+.\Global-Config
  
 #install client certificate for xconnect 
 $XConnectCertParams = @{     
@@ -11,6 +14,7 @@ $XConnectCertParams = @{
 } 
 Write-Host @XConnectCertParams
 Install-SitecoreConfiguration @XConnectCertParams -Verbose
+
 
 <#
 MIT License
