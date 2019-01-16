@@ -144,7 +144,7 @@ Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %PROGRAMDATA%
 
 Clear the Web Platform Installer download cache
 
-Download and extract *Sitecore 9.0.2 rev. 180604 (WDP XPScaled packages).zip* to the c:\resourcefiles directory.
+Download and extract *Sitecore 9.0.2 rev. 180604 (WDP XPScaled packages).zip* to the c:\resourceFiles directory.
     >https://dev.sitecore.net/~/media/F3BCFB785D0849EF857FFD1367797D21.ashx
     > Note: All  WDP Packages (*.zip files) should be directly under the c:\resourcefiles.
 Save your Sitecore license file directly under this directory as *license.xml*.
