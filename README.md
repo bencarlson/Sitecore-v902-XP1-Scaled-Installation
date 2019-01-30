@@ -184,17 +184,17 @@ For a two server environment (i.e. dev & stage), you can split the instances as 
 
 Server1 (Content Delivery / Display server):
 
-*collection
-*collectionsearch
-*marketingautomation
-*marketingautomationreporting
-*referencedata
-*contentdelivery
-*commerceshops
+* collection
+* collectionsearch
+* marketingautomation
+* marketingautomationreporting
+* referencedata
+* contentdelivery
+* commerceshops
 
 Server2 (Content Management / Authoring server):
 
-*everything else. :)
+* everything else. :)
 
 
 ## xConnect and xDB Installation
