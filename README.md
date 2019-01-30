@@ -183,6 +183,7 @@ This only cleans the databases and does not clean any websites
 For a two server environment (i.e. dev & stage), you can split the instances as below: 
 
 Server1 (Content Delivery / Display server):
+
 *collection
 *collectionsearch
 *marketingautomation
@@ -192,6 +193,7 @@ Server1 (Content Delivery / Display server):
 *commerceshops
 
 Server2 (Content Management / Authoring server):
+
 *everything else. :)
 
 
