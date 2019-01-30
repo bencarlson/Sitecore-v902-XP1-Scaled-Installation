@@ -178,6 +178,23 @@ This only cleans the databases and does not clean any websites
 .\Clean-Db
 ```
 
+
+## Instance distribution
+For a two server environment (i.e. dev & stage), you can split the instances as below: 
+
+Server1 (Content Delivery / Display server):
+*collection
+*collectionsearch
+*marketingautomation
+*marketingautomationreporting
+*referencedata
+*contentdelivery
+*commerceshops
+
+Server2 (Content Management / Authoring server):
+*everything else. :)
+
+
 ## xConnect and xDB Installation
 
 There are six different roles to install for xConnect
