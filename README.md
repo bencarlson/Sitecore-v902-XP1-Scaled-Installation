@@ -200,13 +200,14 @@ Server2 (Content Management / Authoring server):
 ## xConnect and xDB Installation
 
 There are six different roles to install for xConnect
-xConnect.Collection
-xConnect.Search
-xDb.MarketingAutomation
-xDB.MarketingAutomationReporting
-xConnect.ReferenceData
-ReportingInstance
-ProcessingInstance
+
+* xConnect.Collection
+* xConnect.Search
+* xDb.MarketingAutomation
+* xDB.MarketingAutomationReporting
+* xConnect.ReferenceData
+* ReportingInstance
+* ProcessingInstance
 
 Note: It is possible to install each of these roles on an individual VM.  To simplify the instructions, the instructions show installing onto the same VM.  If you wish to install onto individual VMs then execute the following steps for each role.
 
@@ -215,21 +216,37 @@ Note: It is possible to install each of these roles on an individual VM.  To sim
 Import the exported VM and change its VM name and machine name to "SC-XC-Col"
 Go into File Explorer/Network and ensure that file sharing is turned off and it is selected for Private Network so that it can find the SQL Server instance.
 
-Open PS in admin in the c:\deploy_xp1_scaled directory
+Open  c:\deploy_xp1_scaled directory in Powershell as Administrator. 
 
-Since this is the first Sitecore specific VM, you need to create or acquire the cert for xconnect_client.
-For dev and eval purposes, a self-signed cert can be created - **BE SURE TO UPDATE PARAMS BEFORE RUNNING (i.e. prefix)** - also be sure the root cert can be exported (private key) or you'll have conflicts on other servers:
+~~Since this is the first Sitecore specific VM, you need to create or acquire the cert for xconnect_client.
+For dev and eval purposes, a self-signed cert can be created - **BE SURE TO UPDATE PARAMS BEFORE RUNNING (i.e. prefix)** - also be sure the root cert can be exported (private key) or you'll have conflicts on other servers. There is a creation script for root certs, but it has... issues: xconnect-CreateCert.ps1~~
+
+You will need many (!!) SSL Certificates. In production, you'll need to use CA signed certs for public facing servers, however in Dev & Stage/QA, you can use self-signed certs. I prefer to create certificates that span many years, so I don't have to hassle with re-creating and installing them frequently. You can use the below script as a starting point for creating your certs:
 
 ```powershell
-.\xconnect-CreateCert.ps1
+PS C:\deploy_xc> New-SelfSignedCertificate -DnsName "server-awesome" -CertStoreLocation "cert:\LocalMachine\My" -KeyAlgorithm RSA -KeyLength 2048 -NotAfter (Get-Date).AddYears(42) -KeyExportPolicy Exportable -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider"
 ```
 
-Since this same cert will be used on multiple machines, you should copy this cert off the Vm and have it handy to install on other machines.
-It should end up in deployment directory:
-SitecoreRootCert.crt
-xp902.xconnect_client
+You'll need one cert for each of the following server instances - the $Prefix should match the $Prefix you've set in the Global-config.ps1 file:
 
-To install the xConnect Collection role, edit the parameters for [xconnect-xp1-Collection.ps1](xconnect-xp1-Collection.ps1), they are exposed so its easy to change them for production environment purposes.
+* $Prefix.collection
+* $Prefix.collectionsearch
+* $Prefix.marketingautomation
+* $Prefix.marketingautomationreporting
+* $Prefix.referencedata
+* $Prefix.processing
+* $Prefix.reporting
+* $Prefix.xconnect_client
+
+Make sure to copy the certs that are generated from your certificate store, to the Trusted Root CA store in the MMC -> Snapins -> Certificates admin tool.
+
+
+You will need to copy these certs to all the other machines in this environment as well. 
+
+**BE SURE TO UPDATE PARAMS IN ALL ps1 FILES BEFORE RUNNING (i.e. prefix, solr URL, )**
+
+
+To install the xConnect Collection role, edit the parameters for [xconnect-xp1-Collection.ps1](xconnect-xp1-Collection.ps1), they are exposed so its easy to change them for production environment purposes. 
 
 ```powershell
 .\xconnect-xp1-Collection.ps1
