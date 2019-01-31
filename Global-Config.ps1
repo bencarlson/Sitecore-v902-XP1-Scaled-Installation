@@ -52,17 +52,17 @@ $global:SolrCorePrefix = $Prefix
 $global:SolrUrl = "https://xc-xp1-solr:8983/solr" 
 
 # Services
-$global:ProcessingService = "https://$Prefix-xconnect"
-$global:ReportingService = "https://$Prefix-xconnect"
+$global:ProcessingService = "https://$Prefix-processing"
+$global:ReportingService = "https://$Prefix-reporting"
 $global:ReportingServiceApiKey = "abcde111112222233333444445555566"
 
-$global:XConnectCollectionSearchService = "https://$Prefix-xconnect"
-$global:XConnectReferenceDataService = "https://$Prefix-xconnect"
+$global:XConnectCollectionSearchService = "https://$Prefix-collectionsearch"
+$global:XConnectReferenceDataService = "https://$Prefix-referencedata"
 
-$global:MarketingAutomationOperationsService = "https://$Prefix-xconnect"
-$global:MarketingAutomationReportingService = "https://$Prefix-xconnect"
+$global:MarketingAutomationOperationsService = "https://$Prefix-marketingautomation"
+$global:MarketingAutomationReportingService = "https://$Prefix-marketingautomationreporting"
 
-$global:XConnectCollectionService = "https://$Prefix-xconnect"
+$global:XConnectCollectionService = "https://$Prefix-collection"
 
 # Encryption
 $global:EXMCryptographicKey = "0x0000000000000000000000000000000000000000000000000000000000000000"
