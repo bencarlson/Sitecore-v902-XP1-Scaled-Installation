@@ -163,7 +163,14 @@ Run command to manually register ScriptDom:
 .\GacMe -filePath "C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin\Microsoft.SqlServer.TransactSql.ScriptDom.dll"
 ```
 
-Review the Configuration settings in Global-Config.ps1.  Your environment may require different settings.  These settings will be used for all role installs so it's important to get them right before exporting the VM as a Base template.
+**Review the Configuration settings in Global-Config.ps1.**  Your environment may require different settings.  Be sure to update the various xconnect services: 
+
+```
+# Services
+$global:ProcessingService = "https://$Prefix-xconnect" <<-- change to "https://$Prefix-processing" etc.
+```
+
+These settings will be used for all role installs so it's important to get them right before exporting the VM as a Base template.
 
 ### At this point you should export this VM as a "base" VM which you can import and reuse for each instance install below
 
