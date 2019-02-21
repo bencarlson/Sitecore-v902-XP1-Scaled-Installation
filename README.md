@@ -136,11 +136,10 @@ Open PS with Admin at location: C:\deploy_xp1_scaled
 PS> .\InstallSitecoreFundamentalsAndInstallFramework.ps1
 ```
 
-Set NETWORK SERVICE with Modify permission to c:\inetpub\wwwroot folder
-
-Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %WINDIR%\Temp\ folder
-Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %WINDIR%\Globalization\ folder (Advanced->Change Owner to "Administrators (<servername>\Administrators)"
-Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %PROGRAMDATA%\Microsoft\Crypto\ folder
+* Set NETWORK SERVICE with Modify permission to c:\inetpub\wwwroot folder
+* Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %WINDIR%\Temp\ folder
+* Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %WINDIR%\Globalization\ folder (Advanced->Change Owner to "Administrators (<servername>\Administrators)"
+* Set IIS_IUSRS or IUSR or NETWORK SERVICE with Modify permission to %PROGRAMDATA%\Microsoft\Crypto\ folder
 
 Clear the Web Platform Installer download cache
 
