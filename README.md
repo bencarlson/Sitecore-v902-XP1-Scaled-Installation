@@ -391,6 +391,13 @@ To install Content Delivery role, edit the parameters in [sitecore-xp1-ContentDe
 
 >Note: The script will take about (+/-) 6 seconds to complete execution, see the [sitecore-XP1-cd.log](sitecore-XP1-cd.log) file.
 
+
+### Testing SQL Connections
+
+https://dougrathbone.com/blog/2013/11/18/testing-connectivity-to-microsoft-sql-server-without-any-tools-installed
+
+
+
 ## Built With
 
 * [Sitecore 9.0 Update 2](http://www.sitecore.come) - The Sitecore XP1 Scaled Platform
@@ -402,6 +409,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## Authors
 
 * **Ramon Aseniero** - *Initial work* - [Sitecore](https://github.com/raseniero)
+* **Ben Carlson ** - updates, fixes, etc. 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
