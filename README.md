@@ -397,6 +397,22 @@ To install Content Delivery role, edit the parameters in [sitecore-xp1-ContentDe
 https://dougrathbone.com/blog/2013/11/18/testing-connectivity-to-microsoft-sql-server-without-any-tools-installed
 
 
+### Databases
+Services and their associated SQL databases:
+
+xconnect.collection
+* prefix_MarketingAutomation
+* prefix_Messaging
+* prefix_Processing.Pools
+
+xconnect.collectionsearch
+* prefix_Xdb.Collection.Shard0
+* prefix_Xdb.Collection.Shard1
+* prefix_Xdb.Collection.ShardMapManager
+
+
+
+
 
 ## Built With
 
