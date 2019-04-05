@@ -217,6 +217,18 @@ There are six different roles to install for xConnect
 
 Note: It is possible to install each of these roles on an individual VM.  To simplify the instructions, the instructions show installing onto the same VM.  If you wish to install onto individual VMs then execute the following steps for each role.
 
+
+
+### SSL certificates
+
+Due to the number of SSL certs that are used, and the number of places the thumbprint is used, the best plan for certificates is to use a wildcard cert (i.e. *.hostname.com) and/or SAN (Subject Alternate Name) cert so you can share the same cert (and thumbprint) on all server instances. 
+
+SAN Cert with Wildcard: 
+```
+New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "*.domain.com, domain.com, secure.login.domain.com"
+```
+
+
 ### xConnect Collection Instance Installation
 
 Import the exported VM and change its VM name and machine name to "SC-XC-Col"
