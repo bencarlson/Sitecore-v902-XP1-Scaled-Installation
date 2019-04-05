@@ -424,6 +424,16 @@ xconnect.collectionsearch
 
 
 
+### Known Issues
+
+4/5/2019 - IIS, instance starts, no logs, no errors, looks like it’s running fine. 
+
+Go to the site in IIS manager
+Open configuration editor
+If error shows up something like “config file could not be read” or a generic error, you’ll need to install https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-2.2.3-windows-hosting-bundle-installer
+
+Seems to be due to a new patch from Microsoft. 
+
 
 
 ## Built With
