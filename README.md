@@ -18,12 +18,7 @@ We will be referencing *the diagram* below in our instructions to come.
 
 The general approach is to start with setting up *Solr* and a *Sql* instance then followed by *XConnect (i.e. Collection, CollectionSearch roles)*, *xDB Services (i.e. ReferenceData, MarketingAutomationReporting, MarketingAutomation roles)*, *Reporting*, *Processing*, *Content Management*, and *Content Delivery* instances.
 
-**Install and Configure SOLR:**
-DeploySolr\01 Deploy_SOLR.md
 
-Install and Configure SQL:
-02 Deploy_SQL.md
-If you already have a SQL Server 2016 instance to use, then you should still validate the steps that ensure that SQL Server can be remotely installed to.  This includes having an admin username and password and ensuring the TCP/IP is enabled.
 
 ## Create Base VM
 
@@ -50,6 +45,14 @@ Open PS in Admin and change Execution Policy (Note: After install, set this back
 ```powershell
 PS> Set-ExecutionPolicy unrestricted
 ```
+
+**Install and Configure SOLR:**
+DeploySolr\01 Deploy_SOLR.md
+
+Install and Configure SQL:
+02 Deploy_SQL.md
+If you already have a SQL Server 2016 instance to use, then you should still validate the steps that ensure that SQL Server can be remotely installed to.  This includes having an admin username and password and ensuring the TCP/IP is enabled.
+
 
 ----------------------------------------------------------
 Install Chrome (dev install only)
